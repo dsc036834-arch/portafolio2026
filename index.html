@@ -1,0 +1,705 @@
+
+<!-- saved from url=(0056)file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html -->
+<html lang="es" class="scroll-smooth"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>html_content = """
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Damián Sánchez &amp; Kevin Andrey</title>
+    <link href="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #090d16;
+            --bg-secondary: #111827;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-cyan: #06b6d4;
+            --accent-purple: #a855f7;
+            --accent-pink: #ec4899;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        /* Glowing background effects */
+        .glow-orb {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .orb-1 { top: 10%; left: -10%; background: var(--accent-cyan); }
+        .orb-2 { top: 40%; right: -10%; background: var(--accent-purple); }
+        .orb-3 { top: 75%; left: 20%; background: var(--accent-pink); }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(9, 13, 22, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Hero Section */
+        header.hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+        .badge {
+            background: rgba(168, 85, 247, 0.1);
+            color: var(--accent-purple);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        header.hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            max-width: 900px;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        header.hero h1 span {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header.hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: #fff;
+            padding: 0.875rem 2.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Container & Section Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        section h2 span {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        .creator-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .creator-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+        .creator-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .creator-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .creator-role {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+        .creator-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.35rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        /* Project Galleries */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+        .project-img-wrapper {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .project-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-img-wrapper img {
+            transform: scale(1.05);
+        }
+        .project-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(9, 13, 22, 0.8);
+            backdrop-filter: blur(8px);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 0.35rem 0.85rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .project-content {
+            padding: 1.75rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .project-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Audio Section / Audacity */
+        .audio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .audio-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+        }
+        .audio-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .audio-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        audio {
+            width: 100%;
+            border-radius: 8px;
+            accent-color: var(--accent-purple);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(16px);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(9, 13, 22, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+            border: 1px solid var(--card-border);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            background: rgba(255,255,255,0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        .lightbox-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        footer p strong {
+            color: var(--text-main);
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .nav-links { display: none; }
+            .contact-container { padding: 1.5rem; }
+        }
+    </style>
+
+
+
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#" class="nav-brand">SÁNCHEZ &amp; ANDREY</a>
+        <ul class="nav-links">
+            <li><a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#about">Sobre Nosotros</a></li>
+            <li><a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#blender">Blender 3D</a></li>
+            <li><a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#canva">Canva</a></li>
+            <li><a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#affinity-photoshop">Affinity &amp; Photoshop</a></li>
+            <li><a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#audacity">Audacity</a></li>
+            <li><a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="badge">
+            <i class="fa-solid fa-graduation-cap"></i> Estudiantes de Grado 10 | I.E. Aureliano Flórez Cardona
+        </div>
+        <h1>Innovación Multimedia y <span>Diseño de Vanguardia</span></h1>
+        <p>Portafolio oficial del equipo creativo de Damián Sánchez y Kevin Andrey. Explorando los límites de la ingeniería, el modelado 3D y la producción digital.</p>
+        <a href="file:///C:/Users/ICD10-ROMEROSANCHEZ/Desktop/intex3.html#about" class="btn-primary">
+            Explorar Trabajos <i class="fa-solid fa-arrow-down"></i>
+        </a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2>Sobre el <span>Equipo</span></h2>
+        <p class="section-desc">Conoce a las mentes creativas detrás de cada proyecto, combinando técnica y pasión artística.</p>
+        
+        <div class="about-grid">
+            <div class="creator-card">
+                <div class="creator-avatar">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <h3>Damián Sánchez</h3>
+                <div class="creator-role">Modelador 3D &amp; Diseñador Multimedia</div>
+                <p>Apasionado por la precisión de la ingeniería y el arte tridimensional. Especializado en Blender, creación de entornos virtuales y postproducción audiovisual.</p>
+                <div class="skills-tags">
+                    <span class="tag">Blender 3D</span>
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Audacity</span>
+                    <span class="tag">Edición de Video</span>
+                </div>
+            </div>
+
+            <div class="creator-card">
+                <div class="creator-avatar">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <h3>Kevin Andrey</h3>
+                <div class="creator-role">Diseñador Gráfico &amp; Artista Visual</div>
+                <p>Enfocado en la estética moderna, la identidad visual corporativa y el diseño publicitario avanzado mediante herramientas profesionales.</p>
+                <div class="skills-tags">
+                    <span class="tag">Canva Pro</span>
+                    <span class="tag">Affinity Designer</span>
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Identidad Visual</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Blender 3D -->
+    <section id="blender" class="container">
+        <h2>1. Proyectos en <span>Blender 3D</span></h2>
+        <p class="section-desc">Modelado tridimensional, renderizado de alta precisión y texturizado fotorrealista.</p>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-img-wrapper" onclick="openLightbox(this.querySelector(&#39;img&#39;).src)">
+                    <span class="project-badge">Hecho en Blender</span>
+                    <img src="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/photo-1633167606207-d840b5070fc2" alt="Render 3D Arquitectura">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>Estudio Arquitectónico Cyberpunk</h3>
+                        <p>Modelado de entorno urbano futurista con iluminación volumétrica avanzada y materiales PBR personalizados.</p>
+                    </div>
+                    <span class="tag" style="width: fit-content;">Render 3D</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper" onclick="openLightbox(this.querySelector(&#39;img&#39;).src)">
+                    <span class="project-badge">Hecho en Blender</span>
+                    <img src="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/photo-1618005182384-a83a8bd57fbe" alt="Modelado de Objeto 3D">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>Mecanismo de Precisión en 3D</h3>
+                        <p>Diseño de pieza mecánica animada aplicando técnicas de rigging y simulación de físicas en Blender.</p>
+                    </div>
+                    <span class="tag" style="width: fit-content;">Simulación 3D</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Canva -->
+    <section id="canva" class="container">
+        <h2>2. Trabajos en <span>Canva</span></h2>
+        <p class="section-desc">Diseños comerciales dinámicos, cartelería institucional y piezas gráficas para redes sociales.</p>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-img-wrapper" onclick="openLightbox(this.querySelector(&#39;img&#39;).src)">
+                    <span class="project-badge">Diseño Canva</span>
+                    <img src="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/photo-1542744094-3a31243264d0" alt="Campaña Institucional">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>Campaña Gráfica I.E. Aureliano Flórez Cardona</h3>
+                        <p>Piezas promocionales y cartelería digital diseñadas para eventos académicos y culturales de la institución.</p>
+                    </div>
+                    <span class="tag" style="width: fit-content;">Branding Escolar</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper" onclick="openLightbox(this.querySelector(&#39;img&#39;).src)">
+                    <span class="project-badge">Diseño Canva</span>
+                    <img src="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/photo-1611162617474-5b21e879e113" alt="Social Media Pack">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>Kit de Redes Sociales Multimedia</h3>
+                        <p>Plantillas dinámicas optimizadas para la difusión de proyectos estudiantiles y contenido interactivo.</p>
+                    </div>
+                    <span class="tag" style="width: fit-content;">Social Media</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Affinity & Photoshop -->
+    <section id="affinity-photoshop" class="container">
+        <h2>3. Trabajos en <span>Affinity &amp; Photoshop</span></h2>
+        <p class="section-desc">Composiciones fotográficas avanzadas, retoque digital profesional e ilustraciones vectoriales con Affinity Designer.</p>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-img-wrapper" onclick="openLightbox(this.querySelector(&#39;img&#39;).src)">
+                    <span class="project-badge">Adobe Photoshop</span>
+                    <img src="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/photo-1550745165-9bc0b252726f" alt="Manipulación fotográfica">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>Composición Digital Sci-Fi</h3>
+                        <p>Manipulación avanzada de capas, efectos de iluminación fotorrealista y gradación de color en Photoshop.</p>
+                    </div>
+                    <span class="tag" style="width: fit-content;">Photomanipulation</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper" onclick="openLightbox(this.querySelector(&#39;img&#39;).src)">
+                    <span class="project-badge">Affinity Designer</span>
+                    <img src="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/photo-1626544827763-d516dce335e2" alt="Ilustración Vectorial Affinity">
+                </div>
+                <div class="project-content">
+                    <div>
+                        <h3>Ilustración Vectorial Conceptual</h3>
+                        <p>Diseño de vectores limpios y tipografía personalizada utilizando el flujo de trabajo fluido de Affinity.</p>
+                    </div>
+                    <span class="tag" style="width: fit-content;">Vector Art</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Audacity / Sound Production -->
+    <section id="audacity" class="container">
+        <h2>4. Producción Sonora en <span>Audacity</span></h2>
+        <p class="section-desc">Edición de audio multicanal, limpieza de ruido, diseño sonoro y locuciones para proyectos multimedia.</p>
+        
+        <div class="audio-grid">
+            <div class="audio-card">
+                <h3>Podcast Institucional - Episodio Piloto</h3>
+                <p>Edición y masterización de voces, eliminación de ruido de fondo y mezcla de cortinillas musicales en Audacity.</p>
+                <audio controls="">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <div class="audio-card">
+                <h3>Efectos Sonoros y Foley para Animación</h3>
+                <p>Diseño de paisajes sonoros y sincronización de efectos de audio para proyectos audiovisuales escolares.</p>
+                <audio controls="">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <div class="contact-container">
+            <h2>Ponte en <span>Contacto</span></h2>
+            <p class="section-desc" style="margin-bottom: 2.5rem;">¿Tienes algún proyecto, propuesta o colaboración en mente? Escríbenos.</p>
+            
+            <form onsubmit="event.preventDefault(); alert(&#39;¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.&#39;); this.reset();">
+                <div class="form-group">
+                    <label for="name">Nombre / Empresa</label>
+                    <input type="text" id="name" class="form-control" placeholder="Tu nombre" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-control" placeholder="correo@ejemplo.com" required="">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" class="form-control" placeholder="Cuéntanos sobre tu idea o proyecto..." required=""></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;">
+                    Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()" style="display: none;">
+        <span class="lightbox-close">×</span>
+        <img id="lightbox-img" src="./Portafolio _ Damián Sánchez &amp; Kevin Andrey_files/photo-1633167606207-d840b5070fc2" alt="Vista previa ampliada">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <strong>Damián Sánchez &amp; Kevin Andrey</strong>. Estudiantes de Grado 10 — <strong>I.E. Aureliano Flórez Cardona</strong>.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Todos los derechos reservados. Diseñado con pasión y tecnología web moderna.</p>
+    </footer>
+
+    <script>
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Close lightbox with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+
+
+"""
+
+with open("portafolio_damian_kevin.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+print("HTML file created successfully.")</body></html>
